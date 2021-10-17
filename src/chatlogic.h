@@ -1,9 +1,10 @@
 #ifndef CHATLOGIC_H_
 #define CHATLOGIC_H_
 
-#include <vector>
-#include <string>
 #include <memory>
+#include <string>
+#include <vector>
+
 #include "chatgui.h"
 
 // forward declarations
@@ -11,9 +12,8 @@ class ChatBot;
 class GraphEdge;
 class GraphNode;
 
-class ChatLogic
-{
-private:
+class ChatLogic {
+   private:
     //// STUDENT CODE
     ////
 
@@ -36,7 +36,7 @@ private:
     template <typename T>
     void AddAllTokensToElement(std::string tokenID, tokenlist &tokens, T &element);
 
-public:
+   public:
     // constructor / destructor
     ChatLogic();
     ~ChatLogic();
