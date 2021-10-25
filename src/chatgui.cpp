@@ -22,7 +22,7 @@ std::string imgBasePath = dataPath + "images/";
 
 bool ChatBotApp::OnInit() {
     // create window with name and show it
-    ChatBotFrame *chatBotFrame = new ChatBotFrame(wxT("Udacity ChatBot"));
+    ChatBotFrame *chatBotFrame = new ChatBotFrame(wxT("MemBot"));
     chatBotFrame->Show(true);
 
     return true;
@@ -85,7 +85,7 @@ void ChatBotFrameImagePanel::paintNow() {
 
 void ChatBotFrameImagePanel::render(wxDC &dc) {
     // load backgroud image from file
-    wxString imgFile = imgBasePath + "sf_bridge.jpg";
+    wxString imgFile = imgBasePath + "first.jpg";
     wxImage image;
     image.LoadFile(imgFile);
 
@@ -172,7 +172,7 @@ void ChatBotPanelDialog::paintNow() {
 
 void ChatBotPanelDialog::render(wxDC &dc) {
     wxImage image;
-    image.LoadFile(imgBasePath + "sf_bridge_inner.jpg");
+    image.LoadFile(imgBasePath + "first.jpg");
 
     wxSize sz = this->GetSize();
     wxImage imgSmall = image.Rescale(sz.GetWidth(), sz.GetHeight(), wxIMAGE_QUALITY_HIGH);
